@@ -1,6 +1,6 @@
 {
   "name": "kalp-test-dapp-package",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Kalp-Wallet-Dapp-Package",
   "main": "index.js",
   "scripts": {

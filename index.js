@@ -38,7 +38,9 @@ function walletAvailablity() {
       window.removeEventListener("message", handleMessage);
     };
   } catch (error) {
-    throw Error("An error occurred while checking wallet availablity: " + error);
+    throw Error(
+      "An error occurred while checking wallet availablity: " + error
+    );
   }
 }
 async function sendTransaction(
@@ -53,11 +55,6 @@ async function sendTransaction(
     if (e) {
       e.preventDefault();
     }
-    const message = {
-      type: "OPEN_WALLET",
-    };
-    await window.postMessage(message, "*");
-
     const newFormData = {
       type: "FORM_DATA",
       transactionType,
@@ -71,4 +68,4 @@ async function sendTransaction(
     throw Error("An error occurred while sending transaction: " + error);
   }
 }
-module.exports = {connect, sendTransaction, getId, walletAvailablity };
+module.exports = { connect, sendTransaction, getId, walletAvailablity };
